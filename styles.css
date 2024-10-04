@@ -1,3 +1,5 @@
+/* ------------- IMPORTED FONTS (N/A) -------------- */
+
 /* ------------------- CSS RESET ------------------- */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -49,7 +51,6 @@ table {
 }
 /* ---------------- ROOT VARIABLES ----------------- */
 :root {
-/* from Assignment // Photo Gallery --> Hints ()     */
   font-family:Arial,Helvetica,san-serif;
   --green:#007d7b;
   --black:#000000;
@@ -67,7 +68,6 @@ html {
 body {
   min-width:485px;
   grid-template-columns:repeat(2,1fr);
-
 }
 
 main {
@@ -169,12 +169,10 @@ figcaption {
   text-transform:uppercase;
 }
 
-/* portrait figcaptions */
 figure:nth-child(n+6):nth-child(-n+7) figcaption {
   bottom:39.25em;
 }
 
-/* bottom figcaptions */
 figure:nth-child(n+8):nth-child(-n+9) figcaption {
   bottom:2.60em;
 }
@@ -183,7 +181,6 @@ figure:nth-last-child(2n+10) figcaption {
   bottom:2.60em;
 }
 
-/* black figcaptions */
 figure:nth-child(n+6):nth-child(-n+8) figcaption {
   color:var(--black);
 }
@@ -192,7 +189,6 @@ figure:nth-child(n+10):nth-child(-n+13) figcaption {
   color:var(--black);
 }
 
-/* last figcaption */
 figure:last-of-type figcaption {
   bottom:16.10em;
 }
@@ -321,5 +317,43 @@ label:last-of-type {
   
 input {
   width:46em;
+}
+}
+/* --------------- MEDIA QUERY (large) ----------------- */
+@media screen and (min-width:1300px) {
+body {
+  min-width:1300px;
+}
+
+header {
+  text-align:left;
+  padding-left:10px;
+}
+
+ul {
+  justify-content:right;
+  padding-right:10px;
+}
+
+#gallery h2, #gallery p  {
+  grid-column:1/-1;
+}
+
+#gallery {
+  text-align:center;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+}
+  
+label {
+  padding-right:66em;
+}
+
+label:last-of-type {
+  padding-right:64em;
+}
+  
+input {
+  width:70em;
 }
 }
