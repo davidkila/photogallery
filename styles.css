@@ -306,7 +306,11 @@ header {
   display:grid;
   grid-template-columns:repeat(2,1fr);
 }
-  
+
+figure:nth-last-child(-n+2)  img {
+  margin-bottom:-1.40em;
+}
+
 label {
   padding-right:42em;
 }
@@ -344,7 +348,11 @@ ul {
   display:grid;
   grid-template-columns:repeat(3,1fr);
 }
-  
+
+figure:nth-last-child(-n+3)  img {
+  margin-bottom:-1.40em;
+}
+
 label {
   padding-right:66em;
 }
