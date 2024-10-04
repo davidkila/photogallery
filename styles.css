@@ -68,6 +68,8 @@ html {
 body {
   min-width:485px;
   grid-template-columns:repeat(2,1fr);
+  margin-left:5em;
+  margin-right:5em;
 }
 
 main {
@@ -122,8 +124,8 @@ a:hover {
   background-color:var(--black);
   width:3em;
   height:2em;
-  bottom:0px;
-  right:0px;
+  bottom:11px;
+  right:11px;
   margin:0 auto;
   border:2px solid var(--white);
   position:fixed;
@@ -295,6 +297,8 @@ small {
 @media screen and (min-width:880px) {
 body {
   min-width:880px;
+  margin-left:9em;
+  margin-right:9em;
 }
 
 header {
@@ -336,6 +340,8 @@ input {
 @media screen and (min-width:1300px) {
 body {
   min-width:1300px;
+  margin-left:9.50em;
+  margin-right:9.50em;
 }
 
 header {
