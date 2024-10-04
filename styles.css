@@ -159,7 +159,9 @@ h2 {
 
 section:last-child > h2 {
   color:var(--white);
+  background-color:var(--black);
   margin-top:1em;
+  padding-top:1em;
 }
 section:nth-child(even) img {
   margin-top:-1.65em;
@@ -200,12 +202,11 @@ figure:last-of-type figcaption {
 }
 
 figure:last-of-type img {
-  margin-bottom:-1.40em;
+  margin-bottom:-3.50em;
 }
 
 section:nth-child(even) > h2 {
   margin-top:0.75em;
-  color:var(--black);
 }
 
 p {
@@ -324,7 +325,7 @@ figure:nth-last-child(-n+2) figcaption {
 }
   
 figure:nth-last-child(-n+2) img {
-  margin-bottom:-1.40em;
+  margin-bottom:-3.50em;
 }
   
 label {
@@ -374,7 +375,7 @@ figure:nth-last-child(-n+3) figcaption {
 }
   
 figure:nth-last-child(-n+3) img {
-  margin-bottom:-1.40em;
+  margin-bottom:-3.50em;
 }
 
 label {
