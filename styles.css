@@ -1,3 +1,325 @@
+/* ------------------- CSS RESET ------------------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ---------------- ROOT VARIABLES ----------------- */
+:root {
+/* from Assignment // Photo Gallery --> Hints ()     */
+  font-family:Arial,Helvetica,san-serif;
+  --green:#007d7b;
+  --black:#000000;
+  --white:#ffffff;
+}
+/* ------ GLOBAL STYLES (mobile first/small) ------- */
+* {
+  box-sizing:border-box;
+}
+
+html {
+  background-color:var(--black);
+}
+
+body {
+  min-width:485px;
+  grid-template-columns:repeat(2,1fr);
+
+}
+
+main {
+  background-color:var(--white);
+  grid-template-columns:1fr;
+  margin-top:40px;
+  margin-bottom:0px;
+  margin-left:0.75em;
+  margin-right:0.75em;
+  padding-top:10px;
+  padding-bottom:0px;
+  padding-left:0;
+  padding-right:0;
+}
+
+header {
+  background-color:var(--white);
+  color:var(--green);
+  font-weight:bold;
+  text-align:center;
+  text-transform:uppercase;
+  margin-top:0px;
+  margin-bottom:40px;
+  margin-left:0.75em;
+  margin-right:0.75em;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+ul {
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+}
+
+nav a {
+  font-size:1.5em;
+  font-weight:bold;
+  color:var(--white);
+  text-align:center;
+  text-decoration:none;
+  text-transform:uppercase;
+  margin-left:0.40em;
+  margin-right:0.40em;
+}
+
+a:hover {
+  color:var(--green);
+}
+
+#top a {
+  background-color:var(--black);
+  width:3em;
+  height:2em;
+  bottom:0px;
+  right:0px;
+  margin:0 auto;
+  border:2px solid var(--white);
+  position:fixed;
+  align-content:center;
+  text-transform:uppercase;
+}
+
+h1 {
+  font-size:3em;
+}
+
+h2 {
+  font-size:2em;
+  color:var(--black);
+  font-weight:bold;
+  text-align:center;
+  text-transform:uppercase;
+  margin-top:0.25em;
+  margin-bottom:1em;
+}
+
+#gallery {
+  text-align:center;
+  display:grid;
+  grid-template-columns:repeat(1,1fr);
+}
+
+#gallery img {
+  margin-top:-1.65em;
+}
+
+figure:last-of-type img {
+  margin-bottom:-1.40em;
+}
+
+figcaption {
+  color:var(--white);
+  width:15em;
+  bottom:17.50em;
+  padding:0.80em;
+  margin:0 auto;
+  position:relative;
+  text-transform:uppercase;
+}
+
+/* portrait figcaptions */
+figure:nth-child(n+6):nth-child(-n+7) figcaption {
+  bottom:39.25em;
+}
+
+/* bottom figcaptions */
+figure:nth-child(n+8):nth-child(-n+9) figcaption {
+  bottom:2.60em;
+}
+
+figure:nth-last-child(2n+10) figcaption {
+  bottom:2.60em;
+}
+
+/* black figcaptions */
+figure:nth-child(n+6):nth-child(-n+8) figcaption {
+  color:var(--black);
+}
+
+figure:nth-child(n+10):nth-child(-n+13) figcaption {
+  color:var(--black);
+}
+
+/* last figcaption */
+figure:last-of-type figcaption {
+  bottom:16.10em;
+}
+
+#gallery h2 {
+  margin-top:0.75em;
+}
+
 p {
-    color:blue;
+  font-size:1.25em;
+  text-align:left;
+  margin-left:0.50em;
+  line-height:1.45em;
+}
+
+p + p {
+  margin-top:1.50em;
+}
+
+#gallery p {
+  margin-top:-0.35em;
+  margin-bottom:1.75em;
+}
+
+figcaption, label, input, small {
+  font-size:1em;
+  text-align:center;
+}
+
+footer h2 {
+  color:var(--white);
+  margin-top:1em;
+}
+
+footer {
+  display:flex;
+  flex-direction:column;
+  color:var(--white);
+  margin-left:0.75em;
+  margin-right:0.75em;
+}
+
+form {
+  display:flex;
+  flex-direction:column;
+  text-transform:uppercase;
+}
+
+label {
+  padding-right:24.75em;
+}
+
+label:last-of-type {
+  padding-right:22.75em;
+}
+
+input {
+  border:none;
+  width:28.75em;
+  margin:0 auto;
+  margin-top:0.25em;
+  margin-bottom:1em;
+  border-radius:0.05em;
+  padding:0.55em;  
+}
+
+::placeholder {
+  color:var(--green);
+  font-weight:bold;
+  text-align:left;
+  text-transform:uppercase;
+}
+
+form p {
+  text-transform:none;
+  margin:0 auto;
+  margin-bottom:2em;
+}
+
+button {
+  background-color:var(--green);
+  color:var(--white);
+  font-weight:bold;
+  margin:0 auto;
+  margin-top:0.25em;
+  border:none;
+  border-radius:1em;
+  padding:0.65em 5.75em;
+  text-transform:uppercase;
+}
+
+small {
+  margin-top:4em;
+  margin-bottom:0.75em;
+  text-align:center;
+  text-transform:uppercase;
+}
+/* --------------- MEDIA QUERY (medium) ----------------- */
+@media screen and (min-width:880px) {
+body {
+  min-width:880px;
+}
+
+header {
+  text-align:left;
+  padding-left:10px;
+}
+
+#gallery h2, #gallery p  {
+  grid-column:1/-1;
+}
+
+#gallery {
+  text-align:center;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+}
+  
+label {
+  padding-right:42em;
+}
+
+label:last-of-type {
+  padding-right:40em;
+}
+  
+input {
+  width:46em;
+}
 }
