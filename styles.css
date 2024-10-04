@@ -202,7 +202,7 @@ figure:last-of-type figcaption {
 }
 
 figure:last-of-type img {
-  margin-bottom:-3.50em;
+  margin-bottom:-1.40em;
 }
 
 section:nth-child(even) > h2 {
@@ -325,7 +325,7 @@ figure:nth-last-child(-n+2) figcaption {
 }
   
 figure:nth-last-child(-n+2) img {
-  margin-bottom:-3.50em;
+  margin-bottom:-1.40em;
 }
   
 label {
@@ -375,7 +375,7 @@ figure:nth-last-child(-n+3) figcaption {
 }
   
 figure:nth-last-child(-n+3) img {
-  margin-bottom:-3.50em;
+  margin-bottom:-1.40em;
 }
 
 label {
