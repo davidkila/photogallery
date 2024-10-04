@@ -1,11 +1,10 @@
 /* ------------- IMPORTED FONTS (N/A) -------------- */
 
 /* ------------------- CSS RESET ------------------- */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+/* http://meyerweb.com/eric/tools/css/reset/
+  v2.0 | 20110126
+  License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -15,39 +14,39 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+  display: block;
+} 
 body {
-	line-height: 1;
+  line-height: 1;
 }
 ol, ul {
-	list-style: none;
+  list-style:none;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 /* ---------------- ROOT VARIABLES ----------------- */
 :root {
@@ -68,13 +67,13 @@ html {
 body {
   min-width:485px;
   grid-template-columns:repeat(2,1fr);
-  margin-left:5em;
-  margin-right:5em;
+  margin-left:2em;
+  margin-right:2em;
 }
 
 main {
-  background-color:var(--white);
   grid-template-columns:1fr;
+  background-color:var(--white);
   margin-top:40px;
   margin-bottom:0px;
   margin-left:0.75em;
@@ -83,6 +82,7 @@ main {
   padding-bottom:0px;
   padding-left:0;
   padding-right:0;
+
 }
 
 header {
@@ -153,6 +153,14 @@ h2 {
   grid-template-columns:repeat(1,1fr);
 }
 
+#contact {
+  background-color:var(--black);
+}
+
+section:last-child > h2 {
+  color:var(--white);
+  margin-top:1em;
+}
 section:nth-child(even) img {
   margin-top:-1.65em;
 }
@@ -197,6 +205,7 @@ figure:last-of-type img {
 
 section:nth-child(even) > h2 {
   margin-top:0.75em;
+  color:var(--black);
 }
 
 p {
@@ -225,11 +234,6 @@ figcaption, label, input, small {
   text-align:center;
 }
 
-footer h2 {
-  color:var(--white);
-  margin-top:1em;
-}
-
 footer {
   display:flex;
   flex-direction:column;
@@ -242,6 +246,13 @@ form {
   display:flex;
   flex-direction:column;
   text-transform:uppercase;
+}
+
+form p {
+  color:var(--white);
+  text-transform:none;
+  margin:0 auto;
+  margin-bottom:2em;
 }
 
 label {
@@ -269,12 +280,6 @@ input {
   text-transform:uppercase;
 }
 
-form p {
-  text-transform:none;
-  margin:0 auto;
-  margin-bottom:2em;
-}
-
 button {
   background-color:var(--green);
   color:var(--white);
@@ -297,8 +302,6 @@ small {
 @media screen and (min-width:880px) {
 body {
   min-width:880px;
-  margin-left:9em;
-  margin-right:9em;
 }
 
 header {
@@ -335,13 +338,15 @@ label:last-of-type {
 input {
   width:46em;
 }
+  
+button {
+  padding:0.65em 11.75em;
+}
 }
 /* --------------- MEDIA QUERY (large) ----------------- */
 @media screen and (min-width:1300px) {
 body {
   min-width:1300px;
-  margin-left:9.50em;
-  margin-right:9.50em;
 }
 
 header {
@@ -382,5 +387,9 @@ label:last-of-type {
   
 input {
   width:70em;
+}
+  
+button {
+  padding:0.65em 22.50em;
 }
 }
