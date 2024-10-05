@@ -1,5 +1,4 @@
 /* ------------- IMPORTED FONTS (N/A) -------------- */
-
 /* ------------------- CSS RESET ------------------- */
 /* http://meyerweb.com/eric/tools/css/reset/
   v2.0 | 20110126
@@ -71,20 +70,6 @@ body {
   margin-right:2em;
 }
 
-main {
-  grid-template-columns:1fr;
-  background-color:var(--white);
-  margin-top:40px;
-  margin-bottom:0px;
-  margin-left:0.75em;
-  margin-right:0.75em;
-  padding-top:10px;
-  padding-bottom:0px;
-  padding-left:0;
-  padding-right:0;
-
-}
-
 header {
   background-color:var(--white);
   color:var(--green);
@@ -116,10 +101,6 @@ nav a {
   margin-right:0.40em;
 }
 
-a:hover {
-  color:var(--green);
-}
-
 #top a {
   background-color:var(--black);
   width:3em;
@@ -131,6 +112,23 @@ a:hover {
   position:fixed;
   align-content:center;
   text-transform:uppercase;
+}
+
+a:hover {
+  color:var(--green);
+}
+
+main {
+  grid-template-columns:1fr;
+  background-color:var(--white);
+  margin-top:40px;
+  margin-bottom:0px;
+  margin-left:0.75em;
+  margin-right:0.75em;
+  padding-top:10px;
+  padding-bottom:0px;
+  padding-left:0;
+  padding-right:0;
 }
 
 h1 {
@@ -147,24 +145,40 @@ h2 {
   margin-bottom:1em;
 }
 
+p {
+  font-size:1.25em;
+  text-align:left;
+  margin-left:0.50em;
+  margin-top:-0.35em;
+  margin-bottom:1.75em;
+  line-height:1.45em;
+}
+
+p + p {
+  margin-top:1.50em;
+}
+
 #gallery {
   text-align:center;
   display:grid;
   grid-template-columns:repeat(1,1fr);
 }
 
-#contact {
-  background-color:var(--black);
+section:nth-child(even) > h2 {
+  margin-top:0.75em;
 }
 
-section:last-child > h2 {
-  color:var(--white);
-  background-color:var(--black);
-  margin-top:1em;
-  padding-top:1em;
+section:nth-child(even) p {
+  margin-top:-0.35em;
+  margin-bottom:1.75em;
 }
+
 section:nth-child(even) img {
   margin-top:-1.65em;
+}
+
+figure:last-of-type img {
+  margin-bottom:-3.40em;
 }
 
 figcaption {
@@ -201,38 +215,20 @@ figure:last-of-type figcaption {
   bottom:14.10em;
 }
 
-figure:last-of-type img {
-  margin-bottom:-3.40em;
-}
-
-section:nth-child(even) > h2 {
-  margin-top:0.75em;
-}
-
-p {
-  font-size:1.25em;
-  text-align:left;
-  margin-left:0.50em;
-  line-height:1.45em;
-}
-
-p + p {
-  margin-top:1.50em;
-}
-
-section:nth-child(even) p {
-  margin-top:-0.35em;
-  margin-bottom:1.75em;
-}
-
-p {
-  margin-top:-0.35em;
-  margin-bottom:1.75em;
-}
-
 figcaption, label, input, small {
   font-size:1em;
   text-align:center;
+}
+
+#contact {
+  background-color:var(--black);
+}
+
+section:last-child > h2 {
+  color:var(--white);
+  background-color:var(--black);
+  margin-top:1em;
+  padding-top:1em;
 }
 
 footer {
@@ -274,13 +270,6 @@ input {
   padding:0.55em;  
 }
 
-::placeholder {
-  color:var(--green);
-  font-weight:bold;
-  text-align:left;
-  text-transform:uppercase;
-}
-
 button {
   background-color:var(--green);
   color:var(--white);
@@ -290,6 +279,13 @@ button {
   border:none;
   border-radius:1em;
   padding:0.65em 5.75em;
+  text-transform:uppercase;
+}
+
+::placeholder {
+  color:var(--green);
+  font-weight:bold;
+  text-align:left;
   text-transform:uppercase;
 }
 
@@ -310,22 +306,22 @@ header {
   padding-left:10px;
 }
 
-section:nth-child(even) :is(h2, p) {
-  grid-column:1/-1;
-}
-
 #gallery {
   text-align:center;
   display:grid;
   grid-template-columns:repeat(2,1fr);
 }
 
-figure:nth-last-child(-n+2) figcaption {
-  bottom:14.10em;
+section:nth-child(even) :is(h2, p) {
+  grid-column:1/-1;
 }
-  
+
 figure:nth-last-child(-n+2) img {
   margin-bottom:-3.40em;
+}
+  
+figure:nth-last-child(-n+2) figcaption {
+  bottom:14.10em;
 }
   
 label {
@@ -360,22 +356,22 @@ ul {
   padding-right:10px;
 }
 
-section:nth-child(even) :is(h2, p) {
-  grid-column:1/-1;
-}
-
 #gallery {
   text-align:center;
   display:grid;
   grid-template-columns:repeat(3,1fr);
 }
-  
-figure:nth-last-child(-n+3) figcaption {
-  bottom:14.10em;
+
+section:nth-child(even) :is(h2, p) {
+  grid-column:1/-1;
 }
-  
+
 figure:nth-last-child(-n+3) img {
   margin-bottom:-3.40em;
+}
+
+figure:nth-last-child(-n+3) figcaption {
+  bottom:14.10em;
 }
 
 label {
